@@ -23,25 +23,24 @@ const menu = [
   },
 ];
 
-//const categories = menu.map((item)=>{ return item.category})
-//or
 const categories = menu.map((item) => item.category);
-//
-console.log(categories);
+// console.log(categories);
 
-const UniqueCategories = new Set(menu.map((item) => item.category)); //set gives us only unique values
-console.log(UniqueCategories); //If we see its output it its giving object but we want array so we will use spread operator
+const UniqueCategories =[...new Set(menu.map((item) => item.category))]; //set gives us only unique values
+// console.log(UniqueCategories); 
 
 const UniqueCategoriesArray = [
-  "apple",
+  "lunch",
   ...new Set(menu.map((item) => item.category)),
-];
-console.log(UniqueCategoriesArray);
+];//we can add on the fly
+
 
 const result = document.querySelector(".result");
 result.innerHTML = UniqueCategoriesArray.map((category) => {
   return `<button>${category}</button>`;
 }).join("");
+
+
 //map - get all instances
 //new set - narrow down
 //['all',...] turn it back to array

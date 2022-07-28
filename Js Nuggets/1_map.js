@@ -59,3 +59,4 @@ const names = people.map((item) => `<h2>${item.name}</h2>`);
 const result = document.querySelector("#result");
 
 result.innerHTML = names.join('');  //our separator will be empty string
+ 
