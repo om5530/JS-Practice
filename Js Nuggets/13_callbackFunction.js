@@ -24,12 +24,24 @@ handleName('omkar', (value) => {
   console.log(value);
 });
 
-const btn = document.querySelector('#btn');
+// const btn = document.querySelector('#btn');
 
-btn.addEventListener('mouseover', function () {
-  console.log('hello mouseIn');
-});
+// btn.addEventListener('mouseover', function () {
+//   console.log('hello mouseIn');
+// });
 
-btn.addEventListener('mouseout', function () {
-  console.log('hello mouseout');
-});
+// btn.addEventListener('mouseout', function () {
+//   console.log('hello mouseout');
+// });
+
+
+//!-
+function second(name){
+  console.log(name);
+}
+
+function first(callback){
+  callback('omkar')
+}
+
+first(second)
